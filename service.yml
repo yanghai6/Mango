@@ -1,0 +1,18 @@
+tools:
+  exceptions: https://sentry.io/organizations/dcsil/projects/mango/?project=5951088
+  logging: https://logtail.com/team/50720/tail?s=105997&rf=now-30d
+  ci: https://github.com/dcsil/mango/actions
+
+services:
+  production: https://mango-app-prod.herokuapp.com/
+  staging: https://mango-app-staging.herokuapp.com/
+
+docs:
+  getting_started: https://github.com/dcsil/mango/blob/develop/app/README.md
+  
+commands:
+  bootstrap: script/bootstrap
+  build-frontend: cd app/static && yarn run build 
+  server: python3 run.py
+  database: python3 ./db_setup.py
+  test: pytest

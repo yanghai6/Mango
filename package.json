@@ -1,0 +1,13 @@
+{
+  "name": "mango-root",
+  "license" : "UNLICENSED",
+  "cacheDirectories": [
+    "app/static/node_modules"
+  ],
+  "scripts": {
+    "heroku-postbuild": "cd app/static && yarn install && yarn run build",
+    "watch": "cd app/static && yarn run watch",
+    "lint": "black . && cd app/static && npx prettier --write .",
+    "test": "cd app/static && yarn jest"
+  }
+}
